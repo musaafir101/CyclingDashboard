@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,500,500i,600,700,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
+    />
+    <style>
+      #cover-section {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+      }
+      .cycling--wrapper {
+        display: flex;
+        justify-content: flex-start;
+        width: 60vw;
+        height: 100vh;
+        background-color: blueviolet;
+        border-radius: 0 3pc 3pc 0;
+      }
+      #vertical--nav {
+        background: #1b0ec6;
+        width: 7vw;
+        border-radius: 0 3pc 3pc 0;
+      }
+      .menu--wrapper {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .menu--wrapper ul {
+        height: 60%;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+      }
+      .menu--wrapper ul li a i {
+        font-size: 22px;
+        color: #b1afaf;
+      }
+      .menu--wrapper ul li a i:hover {
+        color: #ffffff !important;
+      }
+      .link-active i {
+        color: #ffffff !important;
+      }
+      .cycling--content {
+        position: relative;
+        width: 100%;
+        padding: 0 40px;
+      }
+      .slash {
+        position: absolute;
+        right: 4%;
+        top: 50%;
+        height: 35px;
+        width: 3px;
+        background-color: #fff;
+      }
+      #horizonatal-nav {
+        margin-top: 8%;
+        margin-bottom: 5%;
+      }
+      .hor-menu--wrapper ul {
+        margin-top: 20%;
+        width: 65%;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+      }
+      .hor-menu--wrapper ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 14px;
+      }
+      .content--wrapper {
+        padding: 0 35px;
+      }
+      .title--cycling {
+        font-size: 2rem;
+        color: #fff;
+        font-weight: 700;
+      }
+      .title--cycling span {
+        display: block;
+        font-size: 16px;
+        font-weight: normal;
+      }
+      .gif--wrapper {
+        position: relative;
+        height: 400px;
+        width: 100%;
+      }
+      .gif--wrapper img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+      .btn-book-now {
+        width: 25%;
+        border-width: medium;
+        border: none;
+        border-radius: 1pc;
+        background-color: #fa4f57;
+        color: #fff;
+        padding: 18px 20px;
+        font-size: 14px;
+      }
+
+      /* Detail Section */
+
+      .details--wrapper {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 40vw;
+        height: 100vh;
+      }
+      .list--warpper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 140px;
+        width: 100%;
+      }
+      .list-menu--wrapper {
+        width: 55%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 20px;
+      }
+      .list-menu--wrapper ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+      }
+      .list--avatar {
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .list--avatar img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      .list-menu--wrapper ul li a {
+        font-size: 14px !important;
+        font-weight: 500;
+        color: #000;
+        text-decoration: none;
+      }
+      .list-icon--wrapper {
+        width: 45%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 40px;
+      }
+      .dot--icon {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+      }
+      .dots {
+        display: flex;
+      }
+      .dot {
+        height: 5px;
+        width: 5px;
+        background: #8a8a8a;
+        border-radius: 50%;
+        margin: 5px 5px;
+      }
+      .cont--wrapper {
+        width: 550px;
+        margin: 0 auto;
+      }
+      .go-heading {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 25px;
+      }
+      .input--wrapper {
+        margin-bottom: 30px;
+      }
+      .search-input {
+        background-color: #eee;
+        border: none;
+        height: 60px;
+        border-radius: 1pc;
+        padding: 0 40px;
+      }
+      .icon-set {
+        position: absolute;
+        top: 20px;
+        left: 15px;
+        color: #6c757d;
+      }
+      .bg-water {
+        position: relative;
+        background: url(/images/bg/water.jpg) no-repeat;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 200px;
+        width: 100%;
+        background-size: cover;
+        border-radius: 1pc;
+        margin-bottom: 30px;
+      }
+      .bg-water span {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #fff;
+      }
+      .bg-desert {
+        position: relative;
+        background: url(/images/bg/desert.jpg) no-repeat;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 200px;
+        width: 100%;
+        background-size: cover;
+        border-radius: 1pc;
+        margin-bottom: 30px;
+      }
+      .bg-desert span {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #fff;
+      }
+      .bg-ice {
+        position: relative;
+        background: url(/images/bg/ice.jpg) no-repeat;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 200px;
+        width: 100%;
+        background-size: cover;
+        border-radius: 1pc;
+        margin-bottom: 30px;
+      }
+      .bg-ice span {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #fff;
+      }
+      .card--list {
+        height: 460px;
+        overflow: auto;
+        overflow-x: hidden;
+      }
+    </style>
+    <title>Cycling Dashboard</title>
+  </head>
+  <body>
+    <section id="cover-section">
+      <div class="cycling--wrapper" id="hero-road">
+        <nav id="vertical--nav">
+          <div class="menu--wrapper">
+            <ul>
+              <li>
+                <a href="javascript:void(0);" class="link-active"
+                  ><i class="fas fa-home"></i
+                ></a>
+              </li>
+              <li>
+                <a href="javascript:void(0);"
+                  ><i class="fas fa-map-marker-alt"></i
+                ></a>
+              </li>
+              <li>
+                <a href="javascript:void(0);"
+                  ><i class="fas fa-plus-circle"></i
+                ></a>
+              </li>
+              <li>
+                <a href="javascript:void(0);"><i class="fas fa-star"></i></a>
+              </li>
+              <li>
+                <a href="javascript:void(0);"
+                  ><i class="fas fa-info-circle"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="cycling--content">
+          <div class="slash"></div>
+          <nav id="horizonatal-nav">
+            <div class="hor-menu--wrapper">
+              <ul>
+                <li><a href="javascript:void(0);">About tour</a></li>
+                <li><a href="javascript:void(0);">All route</a></li>
+                <li><a href="javascript:void(0);">Distance</a></li>
+                <li><a href="javascript:void(0);">Date</a></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="content--wrapper">
+            <div class="title--cycling">Cycling <span>$360/Person</span></div>
+            <div class="gif--wrapper">
+              <img
+                src="/images/animated/cycling-clipart-animation-8.gif"
+                alt=""
+              />
+            </div>
+            <div class="btn-wrapper">
+              <button class="btn btn-book-now">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="details--wrapper">
+        <div class="list--warpper">
+          <div class="list-menu--wrapper">
+            <ul>
+              <li>
+                <a href="javascript:void(0);">
+                  <div class="list--avatar">
+                    <img src="/images/avatar/5.jpg" alt="" />
+                  </div>
+                </a>
+              </li>
+              <li><a href="javascript:void(0);">My Booking</a></li>
+              <li><a href="javascript:void(0);">Blog</a></li>
+            </ul>
+          </div>
+          <div class="list-icon--wrapper">
+            <div class="dot--icon">
+              <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cont--wrapper">
+          <div class="go-heading">Let's Go</div>
+          <div class="input--wrapper">
+            <div class="form-group position-relative mb-0">
+              <span class="icon-set"><i class="fas fa-search"></i></span>
+              <input
+                type="text"
+                class="form-control search-input"
+                placeholder="Search"
+              />
+            </div>
+          </div>
+          <div class="card--list" id="myScroller">
+            <div class="bg-water">
+              <span>Diving</span>
+            </div>
+            <div class="bg-desert">
+              <span>Hiking</span>
+            </div>
+            <div class="bg-ice">
+              <span>Ice</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <script
+      src="https://kit.fontawesome.com/274c7ce535.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.0.4/dist/gsap.min.js"></script>
+    <script>
+      new SimpleBar(document.getElementById("myScroller"));
+    </script>
+  </body>
+</html>
