@@ -189,7 +189,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        padding: 0 40px;
+        padding: 0 50px;
       }
       .dot--icon {
         width: 30px;
@@ -297,6 +297,204 @@
         overflow: auto;
         overflow-x: hidden;
       }
+      .mobo-hor--nav {
+        display: none;
+      }
+
+      /* @media Queries Section Start */
+
+      /*// Large devices (desktops, 992px and up)*/
+      @media (max-width: 992px) {
+        #vertical--nav {
+          display: none;
+        }
+      }
+      /*// Medium devices (tablets, 768px and up)*/
+      @media (max-width: 768px) {
+        #cover-section {
+          position: relative;
+        }
+        .cycling--wrapper {
+          display: none;
+          position: absolute;
+          z-index: 1;
+          height: 93.27vh;
+          width: 100vw;
+          border-radius: 0;
+        }
+        .gif--wrapper {
+          height: 350px;
+        }
+        .details--wrapper {
+          width: 100vw;
+        }
+        .list--warpper {
+          margin: 20px 0;
+        }
+        .list--avatar {
+          height: 70px;
+          width: 70px;
+        }
+        .list-icon--wrapper {
+          padding: 0px 65px;
+        }
+        .cont--wrapper {
+          width: 640px;
+        }
+        .list--warpper {
+          height: 60px;
+        }
+        .go-heading {
+          font-size: 1.5rem;
+          margin-bottom: 15px;
+        }
+        .input--wrapper {
+          margin-bottom: 20px;
+        }
+        .search-input {
+          height: 50px;
+        }
+        .icon-set {
+          top: 15px;
+        }
+        .card--list {
+          height: 369px;
+        }
+        .bg-water {
+          min-height: 150px;
+        }
+        .bg-desert {
+          min-height: 150px;
+        }
+        .bg-ice {
+          min-height: 150px;
+        }
+        .mobo-hor--nav {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin-top: 27px;
+        }
+        #mobo-hor--navbar {
+          width: 100%;
+          background-color: #1b0ec6;
+          padding: 10px 0;
+        }
+        .mobo-menu--warpper ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          display: flex;
+          justify-content: space-around;
+        }
+        .mobo-menu--warpper ul li a i {
+          color: #b1afaf;
+        }
+        .mobo-menu--warpper ul li a i:hover {
+          color: #fff;
+        }
+        .mobo-menu--warpper ul li a.mobo-active i {
+          color: #fff !important;
+        }
+      }
+      /*Small devices (landscape phones, 576px and up)*/
+      @media (max-width: 576px) {
+        .list-icon--wrapper {
+          padding: 0px 40px;
+        }
+        .cont--wrapper {
+          width: 355px;
+        }
+        .list--avatar {
+          height: 60px;
+          width: 60px;
+        }
+        .list-menu--wrapper {
+          width: 65%;
+        }
+        .go-heading {
+          font-size: 1.5rem;
+        }
+        .list-icon--wrapper {
+          width: 35%;
+        }
+        .bg-water {
+          min-height: 150px;
+        }
+        .bg-desert {
+          min-height: 150px;
+        }
+        .bg-ice {
+          min-height: 150px;
+        }
+        .details--wrapper {
+          position: relative;
+        }
+        .mobo-hor--nav {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin-top: 27px;
+        }
+        #mobo-hor--navbar {
+          width: 100%;
+          background-color: #1b0ec6;
+          padding: 10px 0;
+        }
+        .mobo-menu--warpper ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          display: flex;
+          justify-content: space-around;
+        }
+        .mobo-menu--warpper ul li a i {
+          color: #b1afaf;
+        }
+        .mobo-menu--warpper ul li a i:hover {
+          color: #fff;
+        }
+        .mobo-menu--warpper ul li a.mobo-active i {
+          color: #fff !important;
+        }
+        .hor-menu--wrapper ul {
+          width: 100%;
+        }
+        .content--wrapper {
+          padding: 0 15px;
+        }
+        .btn-book-now {
+          width: 40%;
+        }
+      }
+      /*Extra Small devices (landscape phones, 425px and up)*/
+      @media (max-width: 425px) {
+        .list-icon--wrapper {
+          padding: 0px 40px;
+        }
+        .cont--wrapper {
+          width: 360px;
+        }
+        .go-heading {
+          font-size: 1.5rem;
+        }
+        .bg-water {
+          min-height: 150px;
+        }
+        .bg-desert {
+          min-height: 150px;
+        }
+        .bg-ice {
+          min-height: 150px;
+        }
+      }
+      @media (max-width: 375px) {
+      }
+      @media (max-width: 320px) {
+      }
+      /*Extra Small devices (landscape phones, 425px and up)*/
+
+      /* @media Queries Section End */
     </style>
     <title>Cycling Dashboard</title>
   </head>
@@ -410,6 +608,37 @@
             </div>
           </div>
         </div>
+        <div class="mobo-hor--nav">
+          <nav id="mobo-hor--navbar">
+            <div class="mobo-menu--warpper">
+              <ul>
+                <li>
+                  <a href="javascript:void(0);" class="mobo-active"
+                    ><i class="fas fa-home"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"
+                    ><i class="fas fa-map-marker-alt"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"
+                    ><i class="fas fa-plus-circle"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><i class="fas fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"
+                    ><i class="fas fa-info-circle"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
       </div>
     </section>
 
@@ -433,6 +662,19 @@
     <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.0.4/dist/gsap.min.js"></script>
     <script>
+      $(document).ready(function () {
+        $(".dot--icon").click(function () {
+          $(".cycling--wrapper").animate({
+            width: "toggle",
+          });
+        });
+        $(".slash").click(function () {
+          $(".cycling--wrapper").animate({
+            width: "toggle",
+          });
+        });
+      });
+
       new SimpleBar(document.getElementById("myScroller"));
     </script>
   </body>
