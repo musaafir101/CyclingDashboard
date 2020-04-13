@@ -252,14 +252,14 @@
       $(document).ready(function () {
         $("#toggleUp").click(function () {
           $(".white-section").animate({
-            height: "slideUp",
+            height: "toggle",
           });
           $(".white-section").addClass("d-flex");
         });
         $(".back").click(function () {
           $(".white-section").removeClass("d-flex");
           $(".white-section").animate({
-            height: "slideDown",
+            height: "toggle",
           });
         });
         // if ($(window).width() < 922) {
