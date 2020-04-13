@@ -241,6 +241,16 @@ a {
   font-size: 1rem;
   margin-bottom: 2em;
 }
+.form--wrapper {
+  position: relative;
+}
+.form--wrapper span {
+  position: absolute;
+  top: 29px;
+  left: 15px;
+  font-size: 1.1em;
+  color: #8a8a8a;
+}
 .search-boxes--wrapper {
   overflow-y: scroll;
 }
