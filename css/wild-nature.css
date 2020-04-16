@@ -74,7 +74,7 @@ ul {
 .logo a {
   color: #fff;
   text-transform: uppercase;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 1px;
 }
@@ -98,7 +98,7 @@ ul {
 }
 .menu--warpper ul li a {
   color: #fff;
-  font-size: 1rem;
+  font-size: 14px;
 }
 .content--wrapper {
   width: 20%;
